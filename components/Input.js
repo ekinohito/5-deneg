@@ -12,7 +12,6 @@ export default function Input({margin, placeholder, params, setParams, index}) {
         {placeholder}
         <div style={{
             display: "flex",
-
         }}>
             <input
                 style={{

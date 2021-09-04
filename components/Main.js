@@ -3,6 +3,8 @@ import NavMenu from "./NavMenu";
 import NavElem from "./NavElem";
 import InputForm from "./InputForm";
 import Results from "./Results";
+import AdditionalInfo from "./AdditionalInfo";
+import SpendingResults from "./SpendingResults";
 
 export default function Main() {
     return <main style={{
@@ -35,6 +37,8 @@ export default function Main() {
             }}>
                 <InputForm/>
                 <Results/>
+                <AdditionalInfo/>
+                <SpendingResults/>
             </div>
         </div>
     </main>

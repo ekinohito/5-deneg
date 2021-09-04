@@ -16,10 +16,7 @@ export default function Results() {
                     Налог на прибыль предприятий: <Roubles amount={results.npp}/>
                 </div>
                 <div className={styles.row}>
-                    Вненалоговый доход: <Roubles amount={results.whole - results.npp}/>
-                </div>
-                <div className={styles.row}>
-                    Итого: <Roubles amount={results.whole}/>
+                    Итого: <Roubles amount={results.total}/>
                 </div>
             </div>
         </Paper>

@@ -7,8 +7,6 @@ function sleep(ms) {
 export default async (req, res) => {
   await sleep(400)
   res.status(200).json({
-    "ndfl": "10000",
-    "npp": "123124",
-    "total": "12415135235",
+    "total": "12345",
   })
 }

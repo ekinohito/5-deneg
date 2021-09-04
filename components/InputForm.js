@@ -6,7 +6,8 @@ import TabSelector from "./TabSelector";
 import presets from "../utils/presets.json"
 import Button from "./Button";
 import {useDispatch} from "react-redux";
-import {clear, refresh, setResults} from "../redux/resultsSlice";
+import {refresh, setResults} from "../redux/resultsSlice";
+import api from "../utils/api";
 
 export default function InputForm() {
     const firstTab = '2020'
@@ -58,12 +59,10 @@ export default function InputForm() {
             }}>
                 <Button text="Вычислить значение" margin="0.5rem 0.5rem 0" disabled={!allSet} onClick={async () => {
                     dispatch(refresh())
-                    const res = await fetch('/api/results', {
-                        method: "POST",
-                        body: JSON.stringify(params)
+                    const res = await api.get('results', {
+                        params
                     })
-                    const data = await res.json()
-                    dispatch(setResults(data))
+                    dispatch(setResults(res.data))
                 }
                 }/>
             </div>

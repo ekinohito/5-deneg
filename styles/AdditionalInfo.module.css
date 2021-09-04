@@ -25,3 +25,7 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+.cell {
+    flex-grow: 1;
+}

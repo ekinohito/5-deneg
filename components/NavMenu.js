@@ -7,7 +7,7 @@ export default function NavMenu({children}) {
         top: "30px"
     }}>
         <Paper>
-            <ul style={{listStyleType: "square", margin: "0", paddingLeft: "10px"}}>
+            <ul style={{listStyleType: "none", margin: "1rem 0", paddingLeft: "10px"}}>
                 {children}
             </ul>
         </Paper>
