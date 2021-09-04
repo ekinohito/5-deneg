@@ -31,6 +31,7 @@ export default function InputForm() {
             }}>
                 <TabSelector text="2020" selectedState={selectedState} onSelect={onSelect}/>
                 <TabSelector text="2021" selectedState={selectedState} onSelect={onSelect}/>
+                <TabSelector text="2010" selectedState={selectedState} onSelect={onSelect}/>
                 <TabSelector text="Ваши данные" selectedState={selectedState} onSelect={onSelect}/>
             </div>
             <div style={{
@@ -38,19 +39,47 @@ export default function InputForm() {
                 flexDirection: "row",
                 flexWrap: "wrap"
             }}>
-                <Input margin="0.5rem" placeholder="param 1" index="param1" params={params} setParams={setParams}/>
-                <Input margin="0.5rem" placeholder="param 2" index="param2" params={params} setParams={setParams}/>
-                <Input margin="0.5rem" placeholder="param 3" index="param3" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Прогноз сборов" index="forecast" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Население" index="population" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Подакцизная продукция" index="alco" params={params} setParams={setParams}/>
             </div>
             <div style={{
                 display: "flex",
                 flexDirection: "row",
                 flexWrap: "wrap"
             }}>
-                <Input margin="0.5rem" placeholder="param 4" index="param4" params={params} setParams={setParams}/>
-                <Input margin="0.5rem" placeholder="param 5" index="param5" params={params} setParams={setParams}/>
-                <Input margin="0.5rem" placeholder="param 6" index="param6" params={params} setParams={setParams}/>
-                <Input margin="0.5rem" placeholder="param 7" index="param7" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Индекс 1" index="index1" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Индекс 2" index="index2" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Индекс СDE" index="index_cde" params={params} setParams={setParams}/>
+            </div>
+            <div style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap"
+            }}>
+                <Input margin="0.5rem" placeholder="Индекс C" index="index_c" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Индекс D" index="index_d" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Индекс E" index="index_e" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Индекс F" index="ingex_f" params={params} setParams={setParams}/>
+            </div>
+            <div style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap"
+            }}>
+                <Input margin="0.5rem" placeholder="Налогооблагаемая прибыль" index="tax" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Инвестиции" index="inv2" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Оборот розницы" index="roz1" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Фонд ЗП" index="salary" params={params} setParams={setParams}/>
+            </div>
+            <div style={{
+                display: "flex",
+                flexDirection: "row",
+                flexWrap: "wrap"
+            }}>
+                <Input margin="0.5rem" placeholder="Темпы роста импорта" index="import2" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Количество безработных" index="unemp1" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" placeholder="Уровень безработицы" index="unemp2" params={params} setParams={setParams}/>
             </div>
             <div style={{
                 display: "flex",

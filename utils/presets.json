@@ -17,13 +17,9 @@
     "param6": "254",
     "param7": "6"
   },
-  "Ваши данные": {
-    "param1": "",
-    "param2": "",
-    "param3": "",
-    "param4": "",
-    "param5": "",
-    "param6": "",
-    "param7": ""
+  "2010": {
+    "population": "646.1", "index1": "107.3", "index2": "109.9", "index_cde": "110.4", "index_c": "114.5", "index_d": "111", "index_e": "95.7", "ingex_f": "98.6", "alco": "1048.1", "inv2": "114.8", "roz1": "60033.4", "salary": "54935.5", "tax": "22108.6", "import2": "122.5", "unemp1": "11.9", "unemp2": "3.2", "forecast": "18728828200.0"
   }
+,
+  "Ваши данные": {"population": "", "index1": "", "index2": "", "index_cde": "", "index_c": "", "index_d": "", "index_e": "", "ingex_f": "", "alco": "", "inv2": "", "roz1": "", "salary": "", "tax": "", "import2": "", "unemp1": "", "unemp2": "", "forecast": ""}
 }
