@@ -1,0 +1,12 @@
+.results {
+    margin-top: 20px;
+    transform: none;
+    opacity: 100%;
+    transition: all ease 1s;
+}
+
+.results.hidden {
+    opacity: 0;
+    transform: translate(0px, -20px);
+    transition: all ease 0.5s;
+}

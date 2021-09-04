@@ -1,7 +1,6 @@
 import React from 'react'
 
 export default function Input({margin, placeholder, params, setParams, index}) {
-    console.log(setParams && index && "norm")
     return <label style={{
         margin: margin || "0.1rem",
         flexBasis: "auto",
@@ -24,9 +23,10 @@ export default function Input({margin, placeholder, params, setParams, index}) {
                     backgroundColor: "#F8EDED",
                     padding: "0.5rem",
                     width: "100px",
+                    fontSize: "1rem",
                     flexGrow: 1
                 }}
-                placeholder={placeholder}
+                placeholder="Введите значение"
                 value={params && index && params[index]}
                 onChange={setParams && index && ((e) => setParams({...params, [index]: e.currentTarget.value}))}/>
         </div>

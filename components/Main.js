@@ -1,9 +1,8 @@
 import React from 'react'
 import NavMenu from "./NavMenu";
 import NavElem from "./NavElem";
-import Paper from "./Paper";
-import Input from "./Input";
 import InputForm from "./InputForm";
+import Results from "./Results";
 
 export default function Main() {
     return <main style={{
@@ -35,6 +34,7 @@ export default function Main() {
                 flexGrow: 1
             }}>
                 <InputForm/>
+                <Results/>
             </div>
         </div>
     </main>

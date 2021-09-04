@@ -4,12 +4,18 @@ import Input from "./Input";
 import Heading from "./Heading";
 import TabSelector from "./TabSelector";
 import presets from "../utils/presets.json"
+import Button from "./Button";
+import {useDispatch} from "react-redux";
+import {clear, refresh, setResults} from "../redux/resultsSlice";
 
 export default function InputForm() {
     const firstTab = '2020'
     const selectedState = useState(firstTab)
     const [params, setParams] = useState(presets[firstTab])
     const onSelect = (text) => setParams(presets[text])
+    const isValid = (text) => text && !isNaN(text)
+    const allSet = Object.keys(params).reduce((acc, curr) => acc && isValid(params[curr]), true)
+    const dispatch = useDispatch()
     return <Paper>
         <div style={{
             display: "flex",
@@ -44,6 +50,22 @@ export default function InputForm() {
                 <Input margin="0.5rem" placeholder="param 5" index="param5" params={params} setParams={setParams}/>
                 <Input margin="0.5rem" placeholder="param 6" index="param6" params={params} setParams={setParams}/>
                 <Input margin="0.5rem" placeholder="param 7" index="param7" params={params} setParams={setParams}/>
+            </div>
+            <div style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "end"
+            }}>
+                <Button text="Вычислить значение" margin="0.5rem 0.5rem 0" disabled={!allSet} onClick={async () => {
+                    dispatch(refresh())
+                    const res = await fetch('/api/results', {
+                        method: "POST",
+                        body: JSON.stringify(params)
+                    })
+                    const data = await res.json()
+                    dispatch(setResults(data))
+                }
+                }/>
             </div>
         </div>
     </Paper>
