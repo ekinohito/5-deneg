@@ -10,7 +10,7 @@ export default function Button({text="button", margin="0", onClick, disabled}) {
         cursor: disabled?"default":"pointer",
         color: "#FFFFFF",
         borderRadius: "5px",
-    }} onClick={onClick} onMouseDown={() => setPressed(true)} onMouseUp={() => setPressed(false)}>
+    }} onClick={disabled?undefined:onClick} onMouseDown={() => setPressed(true)} onMouseUp={() => setPressed(false)}>
         {text}
     </button>
 }
