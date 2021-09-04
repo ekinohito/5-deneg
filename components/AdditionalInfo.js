@@ -9,7 +9,7 @@ import api from "../utils/api";
 
 export default function AdditionalInfo() {
     const results = useSelector(state => state.results)
-    const [params, setParams] = useState({debt: 0, deficit: 0})
+    const [params, setParams] = useState({debt: "0", deficit: "0"})
     const isValid = (text) => text && !isNaN(text)
     const allSet = Object.keys(params).reduce((acc, curr) => acc && isValid(params[curr]), true)
     const dispatch = useDispatch()
