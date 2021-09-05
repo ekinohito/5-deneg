@@ -11,6 +11,6 @@ export default function Roubles({amount}) {
         fontSize: "1.5rem",
         fontWeight: "lighter",
     }}>
-        {prettier(amount)} руб.
+        {amount && prettier(amount)} руб.
     </span>
 }

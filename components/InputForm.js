@@ -10,7 +10,7 @@ import {refresh, setResults} from "../redux/resultsSlice";
 import api from "../utils/api";
 
 export default function InputForm() {
-    const firstTab = '2020'
+    const firstTab = '2018'
     const selectedState = useState(firstTab)
     const [params, setParams] = useState(presets[firstTab])
     const onSelect = (text) => setParams(presets[text])
@@ -29,6 +29,8 @@ export default function InputForm() {
                 flexDirection: "row",
                 flexWrap: "wrap"
             }}>
+                <TabSelector text="2018" selectedState={selectedState} onSelect={onSelect}/>
+                <TabSelector text="2019" selectedState={selectedState} onSelect={onSelect}/>
                 <TabSelector text="2020" selectedState={selectedState} onSelect={onSelect}/>
                 <TabSelector text="2021" selectedState={selectedState} onSelect={onSelect}/>
                 <TabSelector text="2010" selectedState={selectedState} onSelect={onSelect}/>
