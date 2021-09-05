@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import Paper from "./Paper";
 import Input from "./Input";
 import Heading from "./Heading";
@@ -15,6 +15,9 @@ export default function InputForm() {
     const selectedState = useState(firstTab)
     const [params, setParams] = useState(presets[firstTab])
     const param = useSelector(state => state.param)
+    useEffect(() => {
+        dispatch(setParam(presets[firstTab].forecast))
+    }, [])
     const onSelect = (text) => {setParams(presets[text]); dispatch(setParam(presets[text].forecast))}
     const isValid = (text) => text && !isNaN(text)
     const allSet = Object.keys(params).reduce((acc, curr) => acc && isValid(params[curr]), true) && isValid(param.forecast)
