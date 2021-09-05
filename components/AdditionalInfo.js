@@ -6,6 +6,7 @@ import Input from "./Input";
 import {refresh, setSpending} from "../redux/spendingSlice";
 import Button from "./Button";
 import api from "../utils/api";
+import Heading from "./Heading";
 
 export default function AdditionalInfo() {
     const results = useSelector(state => state.results)
@@ -13,8 +14,9 @@ export default function AdditionalInfo() {
     const isValid = (text) => text && !isNaN(text)
     const allSet = Object.keys(params).reduce((acc, curr) => acc && isValid(params[curr]), true)
     const dispatch = useDispatch()
-    return  <div className={`${styles.results} ${results.ready?'':styles.hidden}`}>
+    return  <div className={`${styles.results} ${results.ready?'':styles.hidden}`} id="spending">
         <Paper>
+            <Heading>Введите данные для расчета расходов</Heading>
             <div className={styles.container}>
                 <div className={styles.row}>
                     <span className={styles.cell}>Допустимый объем государственного долга:</span>

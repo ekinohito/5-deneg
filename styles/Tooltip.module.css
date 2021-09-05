@@ -1,0 +1,21 @@
+.tooltip {
+    background-color: #FFC317;
+    position: absolute;
+    top: 50px;
+    padding: 3px;
+    border-radius: 5px;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    text-align: center;
+    transition: all 500ms;
+}
+
+.wrapper {
+    position: relative;
+}
+
+.wrapper:hover .tooltip {
+    opacity: 100%;
+    transition: all 500ms;
+}

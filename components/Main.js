@@ -26,9 +26,8 @@ export default function Main() {
                 flexGrow: 1
             }}>
                 <NavMenu>
-                    <NavElem>Прогноз доходов</NavElem>
-                    <NavElem>Прогноз расходов</NavElem>
-                    <NavElem>Тестирование программы</NavElem>
+                    <NavElem to="#income">Прогноз доходов</NavElem>
+                    <NavElem to="#spending">Прогноз расходов</NavElem>
                 </NavMenu>
             </div>
             <div style={{

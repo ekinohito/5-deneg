@@ -1,14 +1,14 @@
 import React from 'react'
 
-export default function Input({margin, placeholder, params, setParams, index}) {
+export default function Input({margin, placeholder, params, setParams, index, hint}) {
     return <label style={{
         margin: margin || "0.1rem",
         flexBasis: "auto",
         flexGrow: 1,
         display: "flex",
         flexDirection: "column",
-        alignItems: "stretch"
-    }}>
+        alignItems: "stretch",
+    }} title={hint}>
         {placeholder}
         <div style={{
             display: "flex",
