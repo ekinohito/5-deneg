@@ -54,8 +54,8 @@ export default function InputForm() {
                 flexDirection: "row",
                 flexWrap: "wrap"
             }}>
-                <Input margin="0.5rem" hint="Индекс потребительских цен в среднем за год" placeholder="Индекс 1" index="index1" params={params} setParams={setParams}/>
-                <Input margin="0.5rem" hint="Индекс потребительских цен декабрь к декабрю" placeholder="Индекс 2" index="index2" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" hint="Индекс потребительских цен в среднем за год" placeholder="ИПЦ за год" index="index1" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" hint="Индекс потребительских цен декабрь к декабрю" placeholder="ИПЦ дек/дек" index="index2" params={params} setParams={setParams}/>
                 <Input margin="0.5rem" hint="Индекс промышленного производства (С+D+E)" placeholder="Индекс СDE" index="index_cde" params={params} setParams={setParams}/>
             </div>
             <div style={{
@@ -63,10 +63,10 @@ export default function InputForm() {
                 flexDirection: "row",
                 flexWrap: "wrap"
             }}>
-                <Input margin="0.5rem" placeholder="Индекс C" index="index_c" params={params} setParams={setParams}/>
-                <Input margin="0.5rem" placeholder="Индекс D" index="index_d" params={params} setParams={setParams}/>
-                <Input margin="0.5rem" placeholder="Индекс E" index="index_e" params={params} setParams={setParams}/>
-                <Input margin="0.5rem" placeholder="Индекс F" index="ingex_f" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" hint="Добыча полезных ископаемых(индекс производства)" placeholder="Индекс C" index="index_c" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" hint="Обрабатывающие производства(индекс производства)" placeholder="Индекс D" index="index_d" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" hint="Производство и распределение электроэнергии, газа и воды(индекс производства)" placeholder="Индекс E" index="index_e" params={params} setParams={setParams}/>
+                <Input margin="0.5rem" hint="Продукция сельского хозяйства во всех категориях хозяйств в сопоставимых ценах" placeholder="Индекс F" index="ingex_f" params={params} setParams={setParams}/>
             </div>
             <div style={{
                 display: "flex",
